@@ -46,10 +46,15 @@ function deleteTodo (pos){
   todos.splice(pos, 1);
   renderTodos();
   saveToStorage();
+  mostraAlerta ();
+  
 }
 
 function saveToStorage(){
   
   localStorage.setItem('list_todos',JSON.stringify(todos));
 
+}
+function mostraAlerta (){
+  alert('Voce tem certeza?')
 }
